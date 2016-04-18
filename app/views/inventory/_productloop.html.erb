@@ -1,0 +1,15 @@
+<div class="row">
+
+	<% @products.each do |product| %>
+			<div class="col-md-3">
+				<div class="well">
+					<h3><%= link_to product.name.capitalize, product_path(id: product.id) %></h3>
+					<p><%= number_to_currency product.price %></p>
+					<p><%= link_to product.category, category_path(category: product.category) %></p>
+					<p><%= link_to "Show", product_path(id: product.id), class: "btn btn-info" %></p>
+				</div>
+			</div>
+		<% end %>
+
+</div>
+

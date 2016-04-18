@@ -1,0 +1,10 @@
+<h2>Enter a new product</h2>
+
+<%= form_tag new_path do %>
+	<%= text_field_tag :name, nil, placeholder: "Product Name", class: "form-control" %>
+	<%= number_field_tag :price, nil, placeholder: "Price", class: "form-control" %>
+	<%= text_field_tag :category, nil, placeholder: "Category", class: "form-control" %>
+	<%= submit_tag "Create Product", class: "btn btn-success" %>
+
+
+<% end %>
